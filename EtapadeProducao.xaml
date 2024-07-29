@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppEquipe1.MainPage">
+
+    <Grid Padding="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <!-- Search and Register Buttons -->
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+            <Button Text="Buscar" />
+            <SearchBar />
+            <Button Text="Cadastrar" />
+        </StackLayout>
+
+        <!-- Data Grid -->
+        <ScrollView Grid.Row="1">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*" />
+                    <ColumnDefinition Width="3*" />
+                    <ColumnDefinition Width="2*" />
+                    <ColumnDefinition Width="2*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+
+                <!-- Headers -->
+                <Label Text="Id produção" FontAttributes="Bold" Grid.Row="0" Grid.Column="0" />
+                <Label Text="Etapa da produção" FontAttributes="Bold" Grid.Row="0" Grid.Column="1" />
+                <Label Text="Data de entrada" FontAttributes="Bold" Grid.Row="0" Grid.Column="2" />
+                <Label Text="Data de saída" FontAttributes="Bold" Grid.Row="0" Grid.Column="3" />
+                <Label Text="Ações" FontAttributes="Bold" Grid.Row="0" Grid.Column="4" />
+
+                <!-- Data Rows -->
+                <CollectionView Grid.Row="1" Grid.ColumnSpan="5" ItemsSource="{Binding Items}">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid Padding="5">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="2*" />
+                                    <ColumnDefinition Width="3*" />
+                                    <ColumnDefinition Width="2*" />
+                                    <ColumnDefinition Width="2*" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+                                <Label Text="{Binding IdProducao}" Grid.Column="0" />
+                                <Label Text="{Binding EtapaProducao}" Grid.Column="1" />
+                                <Label Text="{Binding DataEntrada}" Grid.Column="2" />
+                                <Label Text="{Binding DataSaida}" Grid.Column="3" />
+                                <StackLayout Orientation="Horizontal" Grid.Column="4">
+                                    <Button Text="🖉" Clicked="OnEditButtonClicked" />
+                                    <Button Text="🗑" Clicked="OnDeleteButtonClicked" />
+                                </StackLayout>
+                            </Grid>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </Grid>
+        </ScrollView>
+    </Grid>
+</ContentPage>

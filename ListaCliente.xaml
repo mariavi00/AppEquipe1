@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppEquipe1.MainPage"
+             Title="Controle de Clientes">
+
+    <StackLayout Padding="20" Spacing="20">
+        
+        <!-- Barra de Busca e Botão de Cadastro -->
+        <Grid ColumnDefinitions="*, Auto, Auto">
+            <Entry x:Name="SearchEntry" Placeholder="Buscar" Grid.Column="0"/>
+            <Button Text="🔍" Clicked="OnSearchClicked" Grid.Column="1"/>
+            <Button Text="Cadastre-se" Clicked="OnRegisterClicked" Grid.Column="2"/>
+        </Grid>
+
+        <!-- Tabela de Clientes -->
+        <CollectionView ItemsSource="{Binding Clientes}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid ColumnDefinitions="*,*,*,Auto,Auto">
+                        <Label Text="{Binding Id}" Grid.Column="0"/>
+                        <Label Text="{Binding Nome}" Grid.Column="1"/>
+                        <Label Text="{Binding Telefone}" Grid.Column="2"/>
+                        <Button Text="✏️" Command="{Binding Path=BindingContext.EditCommand, Source={x:Reference Name=MainPage}}" CommandParameter="{Binding .}" Grid.Column="3"/>
+                        <Button Text="🗑️" Command="{Binding Path=BindingContext.DeleteCommand, Source={x:Reference Name=MainPage}}" CommandParameter="{Binding .}" Grid.Column="4"/>
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+    </StackLayout>
+    
+</ContentPage>

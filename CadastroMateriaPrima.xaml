@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppEquipe1.MainPage">
+    <ContentPage.Content>
+        <Grid VerticalOptions="Center" HorizontalOptions="Center">
+            <Frame CornerRadius="20" Padding="20" BackgroundColor="White" HasShadow="True">
+                <StackLayout>
+                    <Label Text="Cadastro de matéria-prima" 
+                           HorizontalOptions="Center" 
+                           FontSize="Large" 
+                           Margin="0,0,0,20" />
+                    <Entry Placeholder="Nome:" 
+                           x:Name="NomeEntry" 
+                           Margin="0,0,0,20" />
+                    <Picker Title="Unidade:" 
+                            x:Name="UnidadePicker" 
+                            Margin="0,0,0,20">
+                        <!-- Add items to the Picker as needed -->
+                    </Picker>
+                    <Button Text="Salvar" 
+                            BackgroundColor="Green" 
+                            TextColor="White" 
+                            Clicked="OnSalvarClicked" 
+                            Margin="0,0,0,20" />
+                    <Button Text="Cancelar" 
+                            Clicked="OnCancelarClicked" />
+                </StackLayout>
+            </Frame>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
