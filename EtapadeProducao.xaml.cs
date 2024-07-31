@@ -1,19 +1,20 @@
 using System.Collections.ObjectModel;
 using Microsoft.Maui.Controls;
+using Modelos;
 
 namespace AppEquipe1
 {
-    public partial class MainPage : ContentPage
+    public partial class EtapadeProducao : ContentPage
     {
-        public ObservableCollection<Item> Items { get; set; }
+        public ObservableCollection<Pedido> Items { get; set; }
 
-        public MainPage()
+        public Etapadeproducao()
         {
             InitializeComponent();
             Items = new ObservableCollection<Item>
             {
-                new Item { IdProducao = "1", EtapaProducao = "Etapa 1", DataEntrada = "01/01/2024", DataSaida = "02/01/2024" },
-                new Item { IdProducao = "2", EtapaProducao = "Etapa 2", DataEntrada = "03/01/2024", DataSaida = "04/01/2024" }
+                new Pedido { IdProducao = "1", EtapaProducao = "Etapa 1", DataEntrada = "01/01/2024", DataSaida = "02/01/2024" },
+                new Pedido { IdProducao = "2", EtapaProducao = "Etapa 2", DataEntrada = "03/01/2024", DataSaida = "04/01/2024" }
             };
             BindingContext = this;
         }
@@ -29,7 +30,7 @@ namespace AppEquipe1
         }
     }
 
-    public class Item
+    public class Pedido
     {
         public string IdProducao { get; set; }
         public string EtapaProducao { get; set; }

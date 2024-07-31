@@ -3,9 +3,9 @@ using Microsoft.Maui.Controls;
 
 namespace AppEquipe1
 {
-    public partial class ConfirmacaoPage : ContentPage
+    public partial class Confirmacao : ContentPage
     {
-        public ConfirmacaoPage()
+        public Confirmacao()
         {
             InitializeComponent();
         }

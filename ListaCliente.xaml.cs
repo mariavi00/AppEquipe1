@@ -4,13 +4,13 @@ using System.Windows.Input;
 
 namespace AppEquipe1
 {
-    public partial class MainPage : ContentPage
+    public partial class ListaCliente : ContentPage
     {
         public ObservableCollection<Cliente> Clientes { get; set; }
         public ICommand EditCommand { get; }
         public ICommand DeleteCommand { get; }
 
-        public MainPage()
+        public ListaCliente()
         {
             InitializeComponent();
             Clientes = new ObservableCollection<Cliente>

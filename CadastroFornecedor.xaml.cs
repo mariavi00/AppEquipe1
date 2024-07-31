@@ -3,9 +3,9 @@ using Microsoft.Maui.Controls;
 
 namespace AppEquipe1
 {
-    public partial class MainPage : ContentPage
+    public partial class CadastroFornecedor : ContentPage
     {
-        public MainPage()
+        public CadastroFornecedor()
         {
             InitializeComponent();
         }

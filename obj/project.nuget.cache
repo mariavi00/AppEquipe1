@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "vRKR2OwKSAJ7AG6jDfIkVg7AGiwX+XyN8Vhl2fNUjCQXX5E3TlF1NxYlD4qUbuq45UmVwVCzIn6mBtEn68hvjw==",
+  "success": false,
+  "projectFilePath": "C:\\Users\\Aluno\\AppEquipe1\\AppEquipe1.csproj",
+  "expectedPackageFiles": [],
+  "logs": [
+    {
+      "code": "NU1012",
+      "level": "Error",
+      "message": "A versão da plataforma não está presente para uma ou mais estruturas de destino, embora elas tenham uma plataforma especificada: net8.0-ios, net8.0-maccatalyst"
+    }
+  ]
+}

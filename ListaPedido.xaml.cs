@@ -3,17 +3,17 @@ using Microsoft.Maui.Controls;
 
 namespace AppEquipe1
 {
-    public partial class MainPage : ContentPage
+    public partial class ListaPedido : ContentPage
     {
-        public ObservableCollection<Item> Items { get; set; }
+        public ObservableCollection<Pedido> Items { get; set; }
 
-        public MainPage()
+        public ListaPedido()
         {
             InitializeComponent();
             Items = new ObservableCollection<Item>
             {
-                new Item { NumeroPedido = "1", Pedido = "Pedido 1", IdCliente = "123", Data = "01/01/2024" },
-                new Item { NumeroPedido = "2", Pedido = "Pedido 2", IdCliente = "456", Data = "02/01/2024" }
+                new Pedido { NumeroPedido = "1", Pedido = "Pedido 1", IdCliente = "123", Data = "01/01/2024" },
+                new Pedido { NumeroPedido = "2", Pedido = "Pedido 2", IdCliente = "456", Data = "02/01/2024" }
             };
             BindingContext = this;
         }
@@ -29,7 +29,7 @@ namespace AppEquipe1
         }
     }
 
-    public class Item
+    public class Pedido
     {
         public string NumeroPedido { get; set; }
         public string Pedido { get; set; }

@@ -3,17 +3,17 @@ using Microsoft.Maui.Controls;
 
 namespace AppEquipe1
 {
-    public partial class MainPage : ContentPage
+    public partial class EstoqueMateriaPrima : ContentPage
     {
-        public ObservableCollection<Item> Items { get; set; }
+        public ObservableCollection<Pedido> Items { get; set; }
 
-        public MainPage()
+        public EstoqueMateriaPrima()
         {
             InitializeComponent();
             Items = new ObservableCollection<Item>
             {
-                new Item { MateriaPrima = "Exemplo 1", Fornecedor = "Fornecedor 1", Quantidade = "10" },
-                new Item { MateriaPrima = "Exemplo 2", Fornecedor = "Fornecedor 2", Quantidade = "20" }
+                new Pedido { MateriaPrima = "Exemplo 1", Fornecedor = "Fornecedor 1", Quantidade = "10" },
+                new Pedido { MateriaPrima = "Exemplo 2", Fornecedor = "Fornecedor 2", Quantidade = "20" }
             };
             BindingContext = this;
         }
@@ -29,7 +29,7 @@ namespace AppEquipe1
         }
     }
 
-    public class Item
+    public class Pedido
     {
         public string MateriaPrima { get; set; }
         public string Fornecedor { get; set; }

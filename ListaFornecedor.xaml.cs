@@ -4,13 +4,13 @@ using System.Windows.Input;
 
 namespace AppEquipe1
 {
-    public partial class FornecedorPage : ContentPage
+    public partial class ListaFornecedor : ContentPage
     {
         public ObservableCollection<Fornecedor> Fornecedores { get; set; }
         public ICommand EditCommand { get; }
         public ICommand DeleteCommand { get; }
 
-        public FornecedorPage()
+        public ListaFornecedor()
         {
             InitializeComponent();
             Fornecedores = new ObservableCollection<Fornecedor>
