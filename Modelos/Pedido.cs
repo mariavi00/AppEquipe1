@@ -24,19 +24,19 @@ namespace AppEquipe1
         {
             return EtapadeProducao;
         }
-        public void SetDatadeEntrada (string e)
+        public void SetDatadeEntrada (DateTime e)
         {
             DatadeEntrada=e;
         }
-        public string GetDatadeEntrada()
+        public DateTime GetDatadeEntrada()
         {
             return DatadeEntrada;
         }
-        public void SetdatadeSaida (string s)
+        public void SetdatadeSaida (DateTime s)
         {
             DatadeSaida=s;
         }
-        public string GetDatadeSaida()
+        public DateTime GetDatadeSaida()
         {
             return DatadeSaida;
         }

@@ -6,15 +6,21 @@ namespace AppEquipe1
 {
     public partial class EtapadeProducao : ContentPage
     {
-        public ObservableCollection<Pedido> Items { get; set; }
+        public ObservableCollection<Encomenda> Items { get; set; }
 
-        public Etapadeproducao()
+        public void Etapadeproducao()
         {
             InitializeComponent();
-            Items = new ObservableCollection<Item>
+            Items = new ObservableCollection<Encomenda>
             {
-                new Pedido { IdProducao = "1", EtapaProducao = "Etapa 1", DataEntrada = "01/01/2024", DataSaida = "02/01/2024" },
-                new Pedido { IdProducao = "2", EtapaProducao = "Etapa 2", DataEntrada = "03/01/2024", DataSaida = "04/01/2024" }
+                new Encomenda { IdProducao = "1", 
+                             EtapaProducao = "Etapa 1", 
+                             DataEntrada = "01/01/2024", 
+                             DataSaida = "02/01/2024" },
+                new Encomenda { IdProducao = "2", 
+                             EtapaProducao = "Etapa 2", 
+                             DataEntrada = "03/01/2024", 
+                             DataSaida = "04/01/2024" }
             };
             BindingContext = this;
         }
@@ -30,7 +36,7 @@ namespace AppEquipe1
         }
     }
 
-    public class Pedido
+    public class Encomenda
     {
         public string IdProducao { get; set; }
         public string EtapaProducao { get; set; }
