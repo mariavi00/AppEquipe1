@@ -1,42 +1,13 @@
-namespace Modelos;
+using LiteDB;
+
+namespace AppEquipe1.Modelos;
 
 public class Etapadeproducao
 {
-    protected string Endereço;
-    protected string Telefone;
-    protected int Idproduçao;
-    protected string TempodeProduçao;
+    public string Endereço {get; set;}
+    public string Telefone {get; set;}
+    [BsonId]
+    public int Idproduçao {get; set;}
+    public string TempodeProduçao {get; set;}
 
-    public void SetEndereço (string e)
-    {
-        Endereço=e;
-    }
-    public string GetEndereço()
-    {
-        return Endereço;
-    }
-    public void SetTelefone (string t)
-    {
-        Telefone=t;
-    }
-    public string GetTelefone()
-    {
-        return Telefone;
-    }
-    public void SetIdproduçao (int Idp)
-    {
-        Idproduçao=Idp;
-    }
-    public int GetIdproduçao()
-    {
-        return Idproduçao;
-    }
-    public void SetTempo (string tempo)
-    {
-        TempodeProduçao=tempo;
-    }
-    public string GetTempo()
-    {
-        return TempodeProduçao;
-    }
 }

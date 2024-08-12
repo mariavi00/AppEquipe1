@@ -1,15 +1,10 @@
-namespace Modelos;
+using LiteDB;
+
+namespace AppEquipe1.Modelos;
 
 public class Fornecedor:Pessoa
 {
-    int IdMateriaPrima;
+    [BsonId]
+    public int IdMateriaPrima {get; set;}
 
-    public void SetIdMateriaPrima (int Idmt)
-    {
-        IdMateriaPrima=Idmt;
-    }
-    public int GetIdMateriaPrima ()
-    {
-        return IdMateriaPrima;
-    }
 }

@@ -1,24 +1,11 @@
-namespace Modelos;
+using LiteDB;
+
+namespace AppEquipe1.Modelos;
 
 public class Unidade
 {
-    int IdUnidade;
-    string NomeUnidade;
+    [BsonId]
+    public int IdUnidade {get; set;}
+    public string NomeUnidade {get; set;}
 
-    public void SetIdUnidade (int IdU)
-    {
-        IdUnidade=IdU;
-    }
-    public int GetIdUnidade()
-    {
-        return IdUnidade;
-    }
-    public void SetNomeUnidade (string NU)
-    {
-        NomeUnidade=NU;
-    }
-    public string GetNomeUnidade()
-    {
-        return NomeUnidade;
-    }
 }

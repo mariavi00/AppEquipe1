@@ -1,6 +1,6 @@
 using System.Collections.ObjectModel;
 using Microsoft.Maui.Controls;
-using Modelos;
+using AppEquipe1.Modelos;
 
 namespace AppEquipe1
 {
