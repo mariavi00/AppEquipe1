@@ -4,19 +4,24 @@ using System.Windows.Input;
 
 namespace AppEquipe1
 {
-    public partial class ListaCliente : ContentPage
+    public partial class ListaClientePage : ContentPage
     {
         public ObservableCollection<Cliente> Clientes { get; set; }
         public ICommand EditCommand { get; }
         public ICommand DeleteCommand { get; }
 
-        public ListaCliente()
+        public ListaClientePage()
         {
             InitializeComponent();
             Clientes = new ObservableCollection<Cliente>
             {
-                new Cliente { Id = 1, Nome = "Cliente 1", Telefone = "12345" },
-                new Cliente { Id = 2, Nome = "Cliente 2", Telefone = "67890" },
+                new Cliente {   Id = 1, 
+                                Nome = "Cliente 1", 
+                                Telefone = "12345" },
+
+                new Cliente {   Id = 2, 
+                                Nome = "Cliente 2", 
+                                Telefone = "67890" },
                 // Adicione mais clientes conforme necessário
             };
 
@@ -31,9 +36,9 @@ namespace AppEquipe1
             // Lógica para busca
         }
 
-        private void OnRegisterClicked(object sender, EventArgs e)
+        private void CadastroClicado(object sender, EventArgs e)
         {
-            // Lógica para cadastro
+            Application.Current.MainPage = new CadastroCliente();        
         }
 
         private void OnEdit(Cliente cliente)

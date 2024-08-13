@@ -1,6 +1,6 @@
 using AppEquipe1.Modelos;
 
-namespace Controles;
+namespace AppEquipe1.Controles;
 
 public class PedidoControle : BaseControle
 {
@@ -24,7 +24,7 @@ public class PedidoControle : BaseControle
   public virtual List<Cliente>? LerTodos()
   {
     var tabela = liteDB.GetCollection<Cliente>(NomeDaTabela);
-    return new List<Cliente>(tabela.FindAll().OrderBy(d => d.Sobrenome));
+    return new List<Cliente>(tabela.FindAll().OrderBy(d => d.DatadeEntrada));
   }
 
   //----------------------------------------------------------------------------

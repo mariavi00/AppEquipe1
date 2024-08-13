@@ -1,6 +1,6 @@
 using AppEquipe1.Modelos;
 
-namespace Controles;
+namespace AppEquipe1.Controles;
 
 public class PessoaControle : BaseControle
 {

@@ -2,7 +2,7 @@ using LiteDB;
 
 namespace AppEquipe1.Modelos;
 
-public class Unidade
+public class Unidade:Registro
 {
     [BsonId]
     public int IdUnidade {get; set;}

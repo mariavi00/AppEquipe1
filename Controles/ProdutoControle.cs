@@ -1,12 +1,12 @@
 using AppEquipe1.Modelos;
 
-namespace Controles;
+namespace AppEquipe1.Controles;
 
-public class AcabamentoControle : BaseControle
+public class ProdutoControle : BaseControle
 {
   //----------------------------------------------------------------------------
 
-  public AcabamentoControle() : base()
+  public ProdutoCliente() : base()
   {
     NomeDaTabela = "Clientes";
   }

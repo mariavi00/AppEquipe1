@@ -2,31 +2,45 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppEquipe1.MainPage"
-             Title="Empresa">
+             Shell.NavBarIsVisible="false">
 
-    <ScrollView>
-        <StackLayout Padding="20" Spacing="20">
-            <!-- Circulo com a palavra 'Empresa' -->
-            <Frame WidthRequest="100" HeightRequest="100" 
-                   BackgroundColor="White" 
-                   CornerRadius="50" 
-                   HorizontalOptions="Center">
-                <Label Text="Empresa" 
-                       HorizontalOptions="Center"
-                       VerticalOptions="Center"/>
-            </Frame>
+        <ScrollView>
+                <VerticalStackLayout
+                        Padding="20"
+                        Spacing="20">
 
-            <!-- Botões -->
-            <Button Text="Controle de clientes" 
-                    HorizontalOptions="FillAndExpand"/>
-            <Button Text="Controle de fornecedores" 
-                    HorizontalOptions="FillAndExpand"/>
-            <Button Text="Controle de estoques" 
-                    HorizontalOptions="FillAndExpand"/>
-            <Button Text="Controle de produção" 
-                    HorizontalOptions="FillAndExpand"/>
-        </StackLayout>
-    </ScrollView>
-    
+                        <Frame WidthRequest="100"
+                               HeightRequest="100"
+                               BackgroundColor="White"
+                               CornerRadius="50"
+                               HorizontalOptions="Center">
+
+                        <Label  Text="Empresa"
+                                HorizontalOptions="Center"
+                                VerticalOptions="Center"/>
+                                
+                        </Frame>
+
+                        <Button Text="Lista de clientes"
+                                HorizontalOptions="FillAndExpand"
+                                Clicked="ListadeCliente"/>
+
+                        <Button Text="Lista de fornecedores"
+                                HorizontalOptions="FillAndExpand"
+                                Clicked="ListadeFornecedor"/>
+
+
+                        <Button Text="Controle de estoques"
+                                HorizontalOptions="FillAndExpand"
+                                Clicked="ControledeEstoque"/>
+
+
+                        <Button Text="Controle de produção"
+                                HorizontalOptions="FillAndExpand"
+                                Clicked="ControledeProducao"/>
+
+                </VerticalStackLayout>
+        </ScrollView>
+
 </ContentPage>
 
