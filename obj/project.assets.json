@@ -33777,11 +33777,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Aluno\\AppEquipe1\\AppEquipe1.csproj",
+      "projectUniqueName": "C:\\Users\\Aluno\\AppEquipe1-1\\AppEquipe1.csproj",
       "projectName": "AppEquipe1",
-      "projectPath": "C:\\Users\\Aluno\\AppEquipe1\\AppEquipe1.csproj",
+      "projectPath": "C:\\Users\\Aluno\\AppEquipe1-1\\AppEquipe1.csproj",
       "packagesPath": "C:\\Users\\Aluno\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Aluno\\AppEquipe1\\obj\\",
+      "outputPath": "C:\\Users\\Aluno\\AppEquipe1-1\\obj\\",
       "projectStyle": "PackageReference",
       "crossTargeting": true,
       "configFilePaths": [

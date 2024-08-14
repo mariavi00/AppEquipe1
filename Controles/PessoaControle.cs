@@ -8,39 +8,39 @@ public class PessoaControle : BaseControle
 
   public PessoaControle() : base()
   {
-    NomeDaTabela = "Clientes";
+    NomeDaTabela = "Pessoas";
   }
 
   //----------------------------------------------------------------------------
 
-  public virtual Registro? Ler(int idCliente)
+  public virtual Registro? Ler(int idPessoa)
   {
-    var collection = liteDB.GetCollection<Cliente>(NomeDaTabela);
-    return collection.FindOne(d => d.Id == idCliente);
+    var collection = liteDB.GetCollection<Pessoa>(NomeDaTabela);
+    return collection.FindOne(d => d.Id == idPessoa);
   }
 
   //----------------------------------------------------------------------------
 
-  public virtual List<Cliente>? LerTodos()
+  public virtual List<Pessoa>? LerTodos()
   {
-    var tabela = liteDB.GetCollection<Cliente>(NomeDaTabela);
-    return new List<Cliente>(tabela.FindAll().OrderBy(d => d.Sobrenome));
+    var tabela = liteDB.GetCollection<Pessoa>(NomeDaTabela);
+    return new List<Pessoa>(tabela.FindAll().OrderBy(d => d.Nome));
   }
 
   //----------------------------------------------------------------------------
 
-  public virtual void Apagar(int idCliente)
+  public virtual void Apagar(int idPessoa)
   {
-    var collection = liteDB.GetCollection<Cliente>(NomeDaTabela);
-    collection.Delete(idCliente);
+    var collection = liteDB.GetCollection<Pessoa>(NomeDaTabela);
+    collection.Delete(idPessoa);
   }
 
   //----------------------------------------------------------------------------
 
-  public virtual void CriarOuAtualizar(Cliente cliente)
+  public virtual void CriarOuAtualizar(Pessoa Pessoa)
   {
-    var collection = liteDB.GetCollection<Cliente>(NomeDaTabela);
-    collection.Upsert(cliente);
+    var collection = liteDB.GetCollection<Pessoa>(NomeDaTabela);
+    collection.Upsert(Pessoa);
   }
 
   //----------------------------------------------------------------------------

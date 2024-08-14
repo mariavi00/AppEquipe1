@@ -13,8 +13,8 @@ public class Pedido:Registro
     public Cliente Cliente{ get; set; }
 
     public string EtapadeProducao { get; set; }
-    DateTime DatadeEntrada;
-    DateTime DatadeSaidaEsperada;
+    public DateTime DatadeEntrada;
+    public DateTime DatadeSaidaEsperada;
 
 }
 

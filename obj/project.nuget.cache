@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "UKp2pqDYVEs=",
+  "dgSpecHash": "Jht7zie2pkQ=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Aluno\\AppEquipe1\\AppEquipe1.csproj",
+  "projectFilePath": "C:\\Users\\Aluno\\AppEquipe1-1\\AppEquipe1.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Aluno\\.nuget\\packages\\googlegson\\2.10.1.4\\googlegson.2.10.1.4.nupkg.sha512",
     "C:\\Users\\Aluno\\.nuget\\packages\\litedb\\5.0.21\\litedb.5.0.21.nupkg.sha512",

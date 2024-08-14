@@ -8,39 +8,39 @@ public class RegistroControle : BaseControle
 
   public RegistroControle() : base()
   {
-    NomeDaTabela = "Clientes";
+    NomeDaTabela = "Registros";
   }
 
   //----------------------------------------------------------------------------
 
-  public virtual Registro? Ler(int idCliente)
+  public virtual Registro? Ler(int idRegistro)
   {
-    var collection = liteDB.GetCollection<Cliente>(NomeDaTabela);
-    return collection.FindOne(d => d.Id == idCliente);
+    var collection = liteDB.GetCollection<Registro>(NomeDaTabela);
+    return collection.FindOne(d => d.Id == idRegistro);
   }
 
   //----------------------------------------------------------------------------
 
-  public virtual List<Cliente>? LerTodos()
+  public virtual List<Registro>? LerTodos()
   {
-    var tabela = liteDB.GetCollection<Cliente>(NomeDaTabela);
-    return new List<Cliente>(tabela.FindAll().OrderBy(d => d.Sobrenome));
+    var tabela = liteDB.GetCollection<Registro>(NomeDaTabela);
+    return new List<Registro>(tabela.FindAll());
   }
 
   //----------------------------------------------------------------------------
 
-  public virtual void Apagar(int idCliente)
+  public virtual void Apagar(int idRegistro)
   {
-    var collection = liteDB.GetCollection<Cliente>(NomeDaTabela);
-    collection.Delete(idCliente);
+    var collection = liteDB.GetCollection<Registro>(NomeDaTabela);
+    collection.Delete(idRegistro);
   }
 
   //----------------------------------------------------------------------------
 
-  public virtual void CriarOuAtualizar(Cliente cliente)
+  public virtual void CriarOuAtualizar(Registro Registro)
   {
-    var collection = liteDB.GetCollection<Cliente>(NomeDaTabela);
-    collection.Upsert(cliente);
+    var collection = liteDB.GetCollection<Registro>(NomeDaTabela);
+    collection.Upsert(Registro);
   }
 
   //----------------------------------------------------------------------------

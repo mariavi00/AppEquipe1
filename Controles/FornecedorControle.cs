@@ -29,7 +29,7 @@ public class FornecedorControle : BaseControle
 
   //----------------------------------------------------------------------------
 
-  public virtual void Apagar(int idCliente)
+  public virtual void Apagar(int idFornecedor)
   {
     var collection = liteDB.GetCollection<Fornecedor>(NomeDaTabela);
     collection.Delete(idFornecedor);
