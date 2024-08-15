@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppEquipe1.ListaFornecedorPage"
+             Title="Controle de Fornecedores">
+
+    <StackLayout Padding="20" 
+                 Spacing="20">
+        
+        <!-- Barra de Busca e Botão de Cadastro -->
+        <Grid ColumnDefinitions="*, Auto, Auto">
+
+            <Entry  x:Name="SearchEntry" 
+                    Placeholder="Buscar" 
+                    Grid.Column="0"/>
+            <Button Text="🔍" 
+                    Clicked="OnSearchClicked" 
+                    Grid.Column="1"/>
+            <Button Text="Cadastre-se" 
+                    Clicked="OnRegisterClicked" 
+                    Grid.Column="2"/>
+        </Grid>
+
+        <!-- Tabela de Fornecedores -->
+        <CollectionView ItemsSource="{Binding Fornecedores}">
+            <CollectionView.Header>
+                <Grid ColumnDefinitions="*,*,*">
+
+                    <Label  Text="Id fornecedor" 
+                            FontAttributes="Bold" 
+                            Grid.Column="0"/>
+                    <Label  Text="Nome do fornecedor" 
+                            FontAttributes="Bold" 
+                            Grid.Column="1"/>
+                    <Label  Text="Telefone" 
+                            FontAttributes="Bold" 
+                            Grid.Column="2"/>
+                </Grid>
+            </CollectionView.Header>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid ColumnDefinitions="*,*,*">
+                        <Label  Text="{Binding Id}" 
+                                Grid.Column="0"/>
+                        <Label  Text="{Binding Nome}" 
+                                Grid.Column="1"/>
+                        <Label  Text="{Binding Telefone}" 
+                                Grid.Column="2"/>
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+    </StackLayout>
+    
+</ContentPage>

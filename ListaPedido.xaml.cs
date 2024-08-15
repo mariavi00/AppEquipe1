@@ -12,8 +12,14 @@ namespace AppEquipe1
             InitializeComponent();
             Items = new ObservableCollection<Lote>
             {
-                new Lote { NumeroPedido = "1", Pedido = "Pedido 1", IdCliente = "123", Data = "01/01/2024" },
-                new Lote { NumeroPedido = "2", Pedido = "Pedido 2", IdCliente = "456", Data = "02/01/2024" }
+                new Lote {  NumeroPedido = "1", 
+                            Pedido = "Pedido 1", 
+                            IdCliente = "123", 
+                            Data = "01/01/2024" },
+                new Lote {  NumeroPedido = "2", 
+                            Pedido = "Pedido 2", 
+                            IdCliente = "456", 
+                            Data = "02/01/2024" }
             };
             BindingContext = this;
         }

@@ -15,7 +15,7 @@ namespace AppEquipe1
         }
         void ListadeFornecedor(object sender, EventArgs args)
         {
-            Application.Current.MainPage = new ListaFornecedor();
+            Application.Current.MainPage = new ListaFornecedorPage();
         }
         void ControledeEstoque(object sender, EventArgs args)
         {

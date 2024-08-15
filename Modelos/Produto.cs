@@ -8,5 +8,5 @@ public class Produto:Registro
     public Pedido Pedido {get; set;}
     [BsonId]
     public int IdProduto {get; set;}
-    
+
 }

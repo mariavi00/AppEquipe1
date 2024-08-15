@@ -13,7 +13,9 @@
         </Grid.ColumnDefinitions>
 
         <!-- Search and Register Buttons -->
-        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+        <StackLayout Orientation="Horizontal" 
+                    HorizontalOptions="Center">
+
             <Button Text="Buscar" />
             <SearchBar />
             <Button Text="Cadastrar" />
@@ -35,14 +37,35 @@
                 </Grid.ColumnDefinitions>
 
                 <!-- Headers -->
-                <Label Text="Nº do pedido" FontAttributes="Bold" Grid.Row="0" Grid.Column="0" />
-                <Label Text="Pedido" FontAttributes="Bold" Grid.Row="0" Grid.Column="1" />
-                <Label Text="Id cliente" FontAttributes="Bold" Grid.Row="0" Grid.Column="2" />
-                <Label Text="Data" FontAttributes="Bold" Grid.Row="0" Grid.Column="3" />
-                <Label Text="Ações" FontAttributes="Bold" Grid.Row="0" Grid.Column="4" />
+                <Label  Text="Nº do pedido" 
+                        FontAttributes="Bold" 
+                        Grid.Row="0" 
+                        Grid.Column="0" />
+
+                <Label  Text="Pedido" 
+                        FontAttributes="Bold" 
+                        Grid.Row="0" 
+                        Grid.Column="1" />
+
+                <Label  Text="Id cliente" 
+                        FontAttributes="Bold" 
+                        Grid.Row="0" 
+                        Grid.Column="2" />
+
+                <Label  Text="Data" 
+                        FontAttributes="Bold" 
+                        Grid.Row="0" 
+                        Grid.Column="3" />
+
+                <Label  Text="Ações" 
+                        FontAttributes="Bold" 
+                        Grid.Row="0" 
+                        Grid.Column="4" />
 
                 <!-- Data Rows -->
-                <CollectionView Grid.Row="1" Grid.ColumnSpan="5" ItemsSource="{Binding Items}">
+                <CollectionView Grid.Row="1" 
+                                Grid.ColumnSpan="5" 
+                                ItemsSource="{Binding Items}">
                     <CollectionView.ItemTemplate>
                         <DataTemplate>
                             <Grid Padding="5">
@@ -53,13 +76,22 @@
                                     <ColumnDefinition Width="2*" />
                                     <ColumnDefinition Width="Auto" />
                                 </Grid.ColumnDefinitions>
-                                <Label Text="{Binding NumeroPedido}" Grid.Column="0" />
-                                <Label Text="{Binding Pedido}" Grid.Column="1" />
-                                <Label Text="{Binding IdCliente}" Grid.Column="2" />
-                                <Label Text="{Binding Data}" Grid.Column="3" />
-                                <StackLayout Orientation="Horizontal" Grid.Column="4">
-                                    <Button Text="🖉" Clicked="OnEditButtonClicked" />
-                                    <Button Text="🗑" Clicked="OnDeleteButtonClicked" />
+
+                                <Label  Text="{Binding NumeroPedido}" 
+                                        Grid.Column="0" />
+                                <Label  Text="{Binding Pedido}" 
+                                        Grid.Column="1" />
+                                <Label  Text="{Binding IdCliente}" 
+                                        Grid.Column="2" />
+                                <Label  Text="{Binding Data}" 
+                                        Grid.Column="3" />
+                                        
+                                <StackLayout Orientation="Horizontal" 
+                                            Grid.Column="4">
+                                    <Button Text="🖉" 
+                                            Clicked="OnEditButtonClicked" />
+                                    <Button Text="🗑" 
+                                            Clicked="OnDeleteButtonClicked" />
                                 </StackLayout>
                             </Grid>
                         </DataTemplate>

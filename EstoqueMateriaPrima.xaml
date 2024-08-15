@@ -13,7 +13,9 @@
         </Grid.ColumnDefinitions>
 
         <!-- Search and Register Buttons -->
-        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+        <StackLayout Orientation="Horizontal"
+                     HorizontalOptions="Center">
+
             <Button Text="Buscar" />
             <SearchBar />
             <Button Text="Cadastrar" />
@@ -34,13 +36,28 @@
                 </Grid.ColumnDefinitions>
 
                 <!-- Headers -->
-                <Label Text="Matéria-prima" FontAttributes="Bold" Grid.Row="0" Grid.Column="0" />
-                <Label Text="Fornecedor" FontAttributes="Bold" Grid.Row="0" Grid.Column="1" />
-                <Label Text="Quantidade" FontAttributes="Bold" Grid.Row="0" Grid.Column="2" />
-                <Label Text="Ações" FontAttributes="Bold" Grid.Row="0" Grid.Column="3" />
+                <Label  Text="Matéria-prima" 
+                        FontAttributes="Bold" 
+                        Grid.Row="0" 
+                        Grid.Column="0" />
+                <Label  Text="Fornecedor" 
+                        FontAttributes="Bold" 
+                        Grid.Row="0" 
+                        Grid.Column="1" />
+                <Label  Text="Quantidade" 
+                        FontAttributes="Bold" 
+                        Grid.Row="0" 
+                        Grid.Column="2" />
+                <Label  Text="Ações" 
+                        FontAttributes="Bold" 
+                        Grid.Row="0" 
+                        Grid.Column="3" />
 
                 <!-- Data Rows -->
-                <CollectionView Grid.Row="1" Grid.ColumnSpan="4" ItemsSource="{Binding Items}">
+                <CollectionView Grid.Row="1" 
+                                Grid.ColumnSpan="4" 
+                                ItemsSource="{Binding Items}">
+                                
                     <CollectionView.ItemTemplate>
                         <DataTemplate>
                             <Grid Padding="5">
@@ -50,12 +67,20 @@
                                     <ColumnDefinition Width="1*" />
                                     <ColumnDefinition Width="Auto" />
                                 </Grid.ColumnDefinitions>
-                                <Label Text="{Binding MateriaPrima}" Grid.Column="0" />
-                                <Label Text="{Binding Fornecedor}" Grid.Column="1" />
-                                <Label Text="{Binding Quantidade}" Grid.Column="2" />
-                                <StackLayout Orientation="Horizontal" Grid.Column="3">
-                                    <Button Text="🖉" Clicked="OnEditButtonClicked" />
-                                    <Button Text="🗑" Clicked="OnDeleteButtonClicked" />
+
+                                <Label  Text="{Binding MateriaPrima}" 
+                                        Grid.Column="0" />
+                                <Label  Text="{Binding Fornecedor}" 
+                                        Grid.Column="1" />
+                                <Label  Text="{Binding Quantidade}" 
+                                        Grid.Column="2" />
+
+                                <StackLayout Orientation="Horizontal" 
+                                             Grid.Column="3">
+                                    <Button Text="🖉" 
+                                            Clicked="OnEditButtonClicked" />
+                                    <Button Text="🗑" 
+                                            Clicked="OnDeleteButtonClicked" />
                                 </StackLayout>
                             </Grid>
                         </DataTemplate>

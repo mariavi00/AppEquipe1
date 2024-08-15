@@ -3,8 +3,14 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppEquipe1.CadastroPedido">
     <ContentPage.Content>
-        <Grid VerticalOptions="Center" HorizontalOptions="Center">
-            <Frame CornerRadius="20" Padding="20" BackgroundColor="White" HasShadow="True">
+        <Grid   VerticalOptions="Center" 
+                HorizontalOptions="Center">
+
+            <Frame  CornerRadius="20" 
+                    Padding="20" 
+                    BackgroundColor="White" 
+                    HasShadow="True">
+
                 <StackLayout>
                     <Label Text="Cadastro de pedido" 
                            HorizontalOptions="Center" 
@@ -21,7 +27,10 @@
                            x:Name="QuantidadeEntry" 
                            Keyboard="Numeric"
                            Margin="0,0,0,20" />
-                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,0,0,20">
+                           
+                    <StackLayout Orientation="Horizontal" 
+                                HorizontalOptions="Center" 
+                                Margin="0,0,0,20">
                         <Button Text="Salvar" 
                                 BackgroundColor="Green" 
                                 TextColor="White" 

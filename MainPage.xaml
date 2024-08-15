@@ -16,6 +16,7 @@
                                HorizontalOptions="Center">
 
                         <Label  Text="Empresa"
+                                FontSize="25"
                                 HorizontalOptions="Center"
                                 VerticalOptions="Center"/>
                                 
