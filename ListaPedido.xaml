@@ -64,7 +64,7 @@
 
                 <!-- Data Rows -->
                 <CollectionView Grid.Row="1" 
-                                Grid.ColumnSpan="5" 
+                                Grid.ColumnSpan="4" 
                                 ItemsSource="{Binding Items}">
                     <CollectionView.ItemTemplate>
                         <DataTemplate>
@@ -73,8 +73,7 @@
                                     <ColumnDefinition Width="1.5*" />
                                     <ColumnDefinition Width="3*" />
                                     <ColumnDefinition Width="2*" />
-                                    <ColumnDefinition Width="2*" />
-                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="2*" />          
                                 </Grid.ColumnDefinitions>
 
                                 <Label  Text="{Binding NumeroPedido}" 
@@ -85,14 +84,7 @@
                                         Grid.Column="2" />
                                 <Label  Text="{Binding Data}" 
                                         Grid.Column="3" />
-                                        
-                                <StackLayout Orientation="Horizontal" 
-                                            Grid.Column="4">
-                                    <Button Text="🖉" 
-                                            Clicked="OnEditButtonClicked" />
-                                    <Button Text="🗑" 
-                                            Clicked="OnDeleteButtonClicked" />
-                                </StackLayout>
+                                    
                             </Grid>
                         </DataTemplate>
                     </CollectionView.ItemTemplate>

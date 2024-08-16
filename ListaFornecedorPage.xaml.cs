@@ -1,16 +1,17 @@
+using AppEquipe1.Modelos;
 using Microsoft.Maui.Controls;
 using System.Collections.ObjectModel;
 using System.Windows.Input;
 
 namespace AppEquipe1
 {
-    public partial class ListaFornecedor : ContentPage
+    public partial class ListaFornecedorPage : ContentPage
     {
         public ObservableCollection<Fornecedor> Fornecedores { get; set; }
         public ICommand EditCommand { get; }
         public ICommand DeleteCommand { get; }
 
-        public ListaFornecedor()
+        public ListaFornecedorPage()
         {
             InitializeComponent();
             Fornecedores = new ObservableCollection<Fornecedor>
@@ -47,10 +48,5 @@ namespace AppEquipe1
         }
     }
 
-    public class Fornecedor
-    {
-        public int Id { get; set; }
-        public string Nome { get; set; }
-        public string Telefone { get; set; }
-    }
+
 }

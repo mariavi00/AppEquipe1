@@ -5,6 +5,7 @@ namespace AppEquipe1
 {
     public partial class CadastroCliente : ContentPage
     {
+        Controles.ClienteControle clienteControle = new Controles.ClienteControle();
         public CadastroCliente()
         {
             InitializeComponent();
@@ -12,9 +13,14 @@ namespace AppEquipe1
 
         private void OnSaveClicked(object sender, EventArgs e)
         {
-            string nome = NomeEntry.Text;
-            string telefone = TelefoneEntry.Text;
+            var cliente = new Modelos.Cliente();
+            cliente.Nome = NomeEntry.Text;
+            cliente.CPF = CPFEntry.Text;
+            cliente.Telefone = TelefoneEntry.Text;
+
+
             // Lógica para salvar os dados
+            clienteControle.CriarOuAtualizar(cliente);
             DisplayAlert("Salvar", "Dados salvos com sucesso!", "OK");
         }
 

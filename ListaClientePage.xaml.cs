@@ -1,3 +1,4 @@
+using AppEquipe1.Modelos;
 using Microsoft.Maui.Controls;
 using System.Collections.ObjectModel;
 using System.Windows.Input;
@@ -52,10 +53,4 @@ namespace AppEquipe1
         }
     }
 
-    public class Cliente
-    {
-        public int Id { get; set; }
-        public string Nome { get; set; }
-        public string Telefone { get; set; }
-    }
 }

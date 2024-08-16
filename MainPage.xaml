@@ -5,42 +5,46 @@
              Shell.NavBarIsVisible="false">
 
         <ScrollView>
-                <VerticalStackLayout
-                        Padding="20"
-                        Spacing="20">
-
-                        <Frame WidthRequest="100"
-                               HeightRequest="100"
-                               BackgroundColor="White"
-                               CornerRadius="50"
-                               HorizontalOptions="Center">
+                <Grid>
+           <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+           </Grid.RowDefinitions>
 
                         <Label  Text="Empresa"
                                 FontSize="25"
                                 HorizontalOptions="Center"
-                                VerticalOptions="Center"/>
-                                
-                        </Frame>
+                                VerticalOptions="Center"
+                                Grid.Row="0"/>
+                        
 
                         <Button Text="Lista de clientes"
-                                HorizontalOptions="FillAndExpand"
-                                Clicked="ListadeCliente"/>
+                                HorizontalOptions="Fill"
+                                Clicked="ListadeCliente"
+                                Grid.Row="1"/>
 
                         <Button Text="Lista de fornecedores"
-                                HorizontalOptions="FillAndExpand"
-                                Clicked="ListadeFornecedor"/>
+                                HorizontalOptions="Fill"
+                                Clicked="ListadeFornecedor"
+                                Grid.Row="2"/>
 
 
                         <Button Text="Controle de estoques"
-                                HorizontalOptions="FillAndExpand"
-                                Clicked="ControledeEstoque"/>
+                                HorizontalOptions="Fill"
+                                Clicked="ControledeEstoque"
+                                Grid.Row="3"/>
 
 
                         <Button Text="Controle de produção"
-                                HorizontalOptions="FillAndExpand"
-                                Clicked="ControledeProducao"/>
+                                HorizontalOptions="Fill"
+                                Clicked="ControledeProducao"
+                                Grid.Row="4"/>
 
-                </VerticalStackLayout>
+           </Grid>
+
         </ScrollView>
 
 </ContentPage>

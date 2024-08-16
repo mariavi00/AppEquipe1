@@ -26,6 +26,15 @@
             VerticalOptions="Center" />
 
         <Entry
+            x:Name="CPFEntry"
+            Placeholder="CPF"
+            Margin="0,0,0,10"
+            WidthRequest="200"
+            HeightRequest="40"
+            HorizontalOptions="Center"
+            VerticalOptions="Center" />    
+
+        <Entry
             x:Name="TelefoneEntry"
             Placeholder="Telefone"
             Margin="0,0,0,20"

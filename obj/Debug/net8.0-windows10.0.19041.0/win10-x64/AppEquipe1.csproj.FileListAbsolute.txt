@@ -476,3 +476,4 @@ C:\Users\Aluno\AppEquipe1-1\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\AppEq
 C:\Users\Aluno\AppEquipe1-1\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\AppEquipe1.dll
 C:\Users\Aluno\AppEquipe1-1\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\refint\AppEquipe1.dll
 C:\Users\Aluno\AppEquipe1-1\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\AppEquipe1.pdb
+C:\Users\Aluno\AppEquipe1\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\LiteDB.dll

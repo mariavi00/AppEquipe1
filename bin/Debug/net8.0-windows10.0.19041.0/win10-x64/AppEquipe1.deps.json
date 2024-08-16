@@ -9,6 +9,7 @@
     ".NETCoreApp,Version=v8.0/win10-x64": {
       "AppEquipe1/1.0": {
         "dependencies": {
+          "LiteDB": "5.0.21",
           "Microsoft.Extensions.Logging.Debug": "8.0.0-rc.1.23419.4",
           "Microsoft.Maui.Controls": "8.0.61",
           "Microsoft.Maui.Controls.Compatibility": "8.0.61",
@@ -27,6 +28,17 @@
           "WinRT.Runtime.dll": {
             "assemblyVersion": "2.0.0.0",
             "fileVersion": "2.0.4.44211"
+          }
+        }
+      },
+      "LiteDB/5.0.21": {
+        "dependencies": {
+          "System.Buffers": "4.5.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/LiteDB.dll": {
+            "assemblyVersion": "5.0.21.0",
+            "fileVersion": "5.0.21.0"
           }
         }
       },
@@ -435,7 +447,8 @@
             "fileVersion": "1.5.0.0"
           }
         }
-      }
+      },
+      "System.Buffers/4.5.1": {}
     }
   },
   "libraries": {
@@ -448,6 +461,13 @@
       "type": "runtimepack",
       "serviceable": false,
       "sha512": ""
+    },
+    "LiteDB/5.0.21": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ykJ7ffFl7P9YQKR/PLci6zupiLrsSCNkOTiw6OtzntH7d2kCYp5L1+3a/pksKgTEHcJBoPXFtg7VZSGVBseN9w==",
+      "path": "litedb/5.0.21",
+      "hashPath": "litedb.5.0.21.nupkg.sha512"
     },
     "Microsoft.Extensions.Configuration/8.0.0": {
       "type": "package",
@@ -602,6 +622,13 @@
       "sha512": "sha512-7AYbQt/XPSbsOwLWeyP+TquJGFwfDsxRRutWZJEKhoyj9pkGDI4VgtX+Uy030PzkuuKsCm1Fz8c8H7saRyAoPg==",
       "path": "microsoft.windowsappsdk/1.5.240311000",
       "hashPath": "microsoft.windowsappsdk.1.5.240311000.nupkg.sha512"
+    },
+    "System.Buffers/4.5.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Rw7ijyl1qqRS0YQD/WycNst8hUUMgrMH4FCn1nNm27M4VxchZ1js3fVjQaANHO5f3sN4isvP4a+Met9Y4YomAg==",
+      "path": "system.buffers/4.5.1",
+      "hashPath": "system.buffers.4.5.1.nupkg.sha512"
     }
   }
 }

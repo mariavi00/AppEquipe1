@@ -28,14 +28,6 @@
                                 Grid.Column="1"/>
                         <Label  Text="{Binding Telefone}" 
                                 Grid.Column="2"/>
-                        <Button Text="✏️" 
-                                Command="{Binding Path=BindingContext.EditCommand, Source={x:Reference Name=MainPage}}" 
-                                CommandParameter="{Binding .}" 
-                                Grid.Column="3"/>
-                        <Button Text="🗑️" 
-                                Command="{Binding Path=BindingContext.DeleteCommand, Source={x:Reference Name=MainPage}}" 
-                                CommandParameter="{Binding .}" 
-                                Grid.Column="4"/>
                     </Grid>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
