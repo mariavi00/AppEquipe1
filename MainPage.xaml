@@ -5,46 +5,46 @@
              Shell.NavBarIsVisible="false">
 
         <ScrollView>
-                <Grid>
-           <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-           </Grid.RowDefinitions>
-
+                
+                <VerticalStackLayout>
                         <Label  Text="Empresa"
                                 FontSize="25"
                                 HorizontalOptions="Center"
-                                VerticalOptions="Center"
-                                Grid.Row="0"/>
+                                Margin="0,150,0,100"
+                                VerticalOptions="Start"/>
                         
 
                         <Button Text="Lista de clientes"
-                                HorizontalOptions="Fill"
                                 Clicked="ListadeCliente"
-                                Grid.Row="1"/>
+                                HeightRequest="50"
+                                VerticalOptions="End"
+                                Margin="15,35,15,15"
+                                BackgroundColor="#a675e6"/>
 
                         <Button Text="Lista de fornecedores"
-                                HorizontalOptions="Fill"
                                 Clicked="ListadeFornecedor"
-                                Grid.Row="2"/>
+                                HeightRequest="50"
+                                VerticalOptions="End"
+                                Margin="15,0,15,15"
+                                BackgroundColor="#a675e6"/>
 
 
                         <Button Text="Controle de estoques"
-                                HorizontalOptions="Fill"
                                 Clicked="ControledeEstoque"
-                                Grid.Row="3"/>
+                                HeightRequest="50"
+                                VerticalOptions="End"
+                                Margin="15,0,15,15"
+                                BackgroundColor="#a675e6"/>
 
 
                         <Button Text="Controle de produção"
-                                HorizontalOptions="Fill"
                                 Clicked="ControledeProducao"
-                                Grid.Row="4"/>
+                                HeightRequest="50"
+                                VerticalOptions="End"
+                                Margin="15,0,15,0"
+                                BackgroundColor="#a675e6"/>
 
-           </Grid>
-
+                </VerticalStackLayout>
         </ScrollView>
 
 </ContentPage>

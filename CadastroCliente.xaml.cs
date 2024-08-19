@@ -11,17 +11,21 @@ namespace AppEquipe1
             InitializeComponent();
         }
 
-        private void OnSaveClicked(object sender, EventArgs e)
+        private void SalvarFoiClicado(object sender, EventArgs e)
         {
             var cliente = new Modelos.Cliente();
             cliente.Nome = NomeEntry.Text;
             cliente.CPF = CPFEntry.Text;
             cliente.Telefone = TelefoneEntry.Text;
-
-
-            // Lógica para salvar os dados
+            
             clienteControle.CriarOuAtualizar(cliente);
-            DisplayAlert("Salvar", "Dados salvos com sucesso!", "OK");
+            
+            frameSalvar.IsVisible = true;
+        }
+
+        void BotaoOkClicado(object sender, EventArgs args)
+        {
+            Application.Current.MainPage = new ListaClientePage();
         }
 
         private void OnCancelClicked(object sender, EventArgs e)
