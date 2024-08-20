@@ -14,17 +14,12 @@ namespace AppEquipe1
         public ListaFornecedorPage()
         {
             InitializeComponent();
-            Fornecedores = new ObservableCollection<Fornecedor>
-            {
-                new Fornecedor { Id = 1, Nome = "Fornecedor 1", Telefone = "12345" },
-                new Fornecedor { Id = 2, Nome = "Fornecedor 2", Telefone = "67890" },
-                // Adicione mais fornecedores conforme necessário
-            };
+           
+        }
 
-            EditCommand = new Command<Fornecedor>(OnEdit);
-            DeleteCommand = new Command<Fornecedor>(OnDelete);
-
-            BindingContext = this;
+        private void VoltarClicado(object sender, EventArgs e)
+        {
+            Application.Current.MainPage = new MainPage();
         }
 
         private void OnSearchClicked(object sender, EventArgs e)
@@ -32,9 +27,9 @@ namespace AppEquipe1
             // Lógica para busca
         }
 
-        private void OnRegisterClicked(object sender, EventArgs e)
+        private void CadastrarClicado(object sender, EventArgs e)
         {
-            // Lógica para cadastro
+            Application.Current.MainPage = new CadastroFornecedor();
         }
 
         private void OnEdit(Fornecedor fornecedor)

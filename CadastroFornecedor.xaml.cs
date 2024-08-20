@@ -1,4 +1,5 @@
 using System;
+using AppEquipe1.Controles;
 using Microsoft.Maui.Controls;
 
 namespace AppEquipe1
@@ -15,9 +16,12 @@ namespace AppEquipe1
             string nome = NomeEntry.Text;
             string telefone = TelefoneEntry.Text;
             string materiaPrima = MateriaPrimaEntry.Text;
-            // Lógica para salvar os dados
+            
             DisplayAlert("Salvar", "Dados salvos com sucesso!", "OK");
-        }
+        
+            if (Application.Current != null)
+            Application.Current.MainPage = new ListaFornecedorPage();
+            }
 
         private void OnCancelClicked(object sender, EventArgs e)
         {

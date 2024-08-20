@@ -8,17 +8,20 @@
                  Spacing="20">
         
         <!-- Barra de Busca e Botão de Cadastro -->
-        <Grid ColumnDefinitions="*, Auto, Auto">
-
+        <Grid ColumnDefinitions="Auto,*, Auto, Auto">
+        
+            <Button Text="Voltar"
+                    Clicked="VoltarClicado"
+                    Grid.Column="0"/>
             <Entry  x:Name="SearchEntry" 
                     Placeholder="Buscar" 
-                    Grid.Column="0"/>
+                    Grid.Column="1"/>
             <Button Text="🔍" 
                     Clicked="OnSearchClicked" 
-                    Grid.Column="1"/>
-            <Button Text="Cadastre-se" 
-                    Clicked="OnRegisterClicked" 
                     Grid.Column="2"/>
+            <Button Text="Cadastre-se" 
+                    Clicked="CadastrarClicado" 
+                    Grid.Column="3"/>
         </Grid>
 
         <!-- Tabela de Fornecedores -->
@@ -26,10 +29,10 @@
             <CollectionView.Header>
                 <Grid ColumnDefinitions="*,*,*">
 
-                    <Label  Text="Id fornecedor" 
+                    <Label  Text="Id" 
                             FontAttributes="Bold" 
                             Grid.Column="0"/>
-                    <Label  Text="Nome do fornecedor" 
+                    <Label  Text="Nome" 
                             FontAttributes="Bold" 
                             Grid.Column="1"/>
                     <Label  Text="Telefone" 

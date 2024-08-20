@@ -28,11 +28,20 @@ namespace AppEquipe1
             Application.Current.MainPage = new ListaClientePage();
         }
 
-        private void OnCancelClicked(object sender, EventArgs e)
+        void CancelarClicado(object sender, EventArgs args)
         {
-            NomeEntry.Text = string.Empty;
-            TelefoneEntry.Text = string.Empty;
-            DisplayAlert("Cancelar", "Cadastro cancelado!", "OK");
+            frameCancelar.IsVisible = true;
         }
+
+        void NaoCancelarClicado(object sender, EventArgs args)
+        {
+            frameCancelar.IsVisible = false;
+        }
+
+        void SimCancelarClicado(object sender, EventArgs args)
+        {
+            Application.Current.MainPage = new ListaClientePage();
+        }
+
     }
 }

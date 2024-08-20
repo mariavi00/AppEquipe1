@@ -15,12 +15,7 @@ namespace AppEquipe1
         public ListaClientePage()
         {
             InitializeComponent();
-            
-
-            EditCommand = new Command<Cliente>(OnEdit);
-            DeleteCommand = new Command<Cliente>(OnDelete);
-
-            BindingContext = this;
+           
         }
 
         protected override void OnAppearing()
@@ -29,7 +24,12 @@ namespace AppEquipe1
             Lista.ItemsSource=clienteControle.LerTodos();
         }
 
-        private void OnSearchClicked(object sender, EventArgs e)
+        private void VoltarClicado(object sender, EventArgs e)
+        {
+            Application.Current.MainPage = new MainPage();
+        }
+
+        private void BuscarClicado(object sender, EventArgs e)
         {
             // Lógica para busca
         }

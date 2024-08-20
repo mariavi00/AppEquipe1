@@ -6,29 +6,50 @@
 
     <VerticalStackLayout Padding="20" Spacing="20">
         
-        <Grid ColumnDefinitions="*, Auto, Auto">
-            <Entry  x:Name="SearchEntry" 
-                    Placeholder="Buscar" 
+        <Grid ColumnDefinitions="Auto, *, Auto, Auto">
+            <Button Text="Voltar"
+                    Clicked="VoltarClicado"
                     Grid.Column="0"/>
-            <Button Text="🔍" 
-                    Clicked="OnSearchClicked" 
+            <Entry  x:Name="Busca" 
+                    Placeholder="Buscar"
                     Grid.Column="1"/>
+            <Button Text="🔍" 
+                    Clicked="BuscarClicado" 
+                    Grid.Column="2"/>
             <Button Text="Cadastre-se" 
                     Clicked="CadastroClicado" 
-                    Grid.Column="2"/>
+                    Grid.Column="3"/>
         </Grid>
+                
+                <Grid ColumnDefinitions="25,*,*,*">
 
+                    <Label  Text="Id" 
+                            FontAttributes="Bold" 
+                            Grid.Column="0"/>
+                    <Label  Text="Nome" 
+                            FontAttributes="Bold" 
+                            Grid.Column="1"/>
+                    <Label  Text="Telefone" 
+                            FontAttributes="Bold" 
+                            Grid.Column="2"/>
+                    <Label  Text="CPF"
+                            FontAttributes="Bold"
+                            Grid.Column="3"/>
+                </Grid>
         <ListView x:Name="Lista" >
+
             <ListView.ItemTemplate>
                 <DataTemplate>
                 <ViewCell>
-                    <Grid ColumnDefinitions="*,*,*,Auto,Auto">
+                    <Grid ColumnDefinitions="25, *, *, *">
                         <Label  Text="{Binding Id}" 
                                 Grid.Column="0"/>
                         <Label  Text="{Binding Nome}" 
                                 Grid.Column="1"/>
                         <Label  Text="{Binding Telefone}" 
                                 Grid.Column="2"/>
+                        <Label  Text="{Binding CPF}"
+                                Grid.Column="3"/>
                     </Grid>
                     </ViewCell>
                 </DataTemplate>
