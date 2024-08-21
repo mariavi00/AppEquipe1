@@ -3,71 +3,119 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppEquipe1.CadastroFornecedor">
 
-    <VerticalStackLayout
-        VerticalOptions="Center"
-        HorizontalOptions="Center"
-        Padding="20"
-        BackgroundColor="White">
+    <Grid>
+         <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="*"/>
+         </Grid.RowDefinitions>
 
         <Label
             Text="Cadastro de fornecedor"
             FontSize="24"
             HorizontalOptions="Center"
             VerticalOptions="Center"
-            Margin="0,0,0,20" />
+            Margin="0,0,0,20"
+            Grid.Row="0" />
+
+        <Label
+            Text="Nome:"
+            Grid.Row="1"
+            Margin="60,15,20,20"/>
+
+        <Label
+            Text="Telefone:"
+            Grid.Row="2"
+            Margin="45,15,20,20"/>
+
+        <Label
+            Text="Matéria Prima:"
+            Grid.Row="3"
+            Margin="15,15,20,20"/>    
 
         <Entry
             x:Name="NomeEntry"
-            Placeholder="Nome"
             Margin="0,0,0,10"
             WidthRequest="200"
             HeightRequest="40"
             HorizontalOptions="Center"
-            VerticalOptions="Center" />
+            VerticalOptions="Center"
+            Grid.Row="1" />
 
         <Entry
             x:Name="TelefoneEntry"
-            Placeholder="Telefone"
             Margin="0,0,0,10"
             WidthRequest="200"
             HeightRequest="40"
             HorizontalOptions="Center"
-            VerticalOptions="Center" />
+            VerticalOptions="Center"
+            Grid.Row="2" />
 
         <Entry
             x:Name="MateriaPrimaEntry"
-            Placeholder="Matéria-prima"
             Margin="0,0,0,20"
             WidthRequest="200"
             HeightRequest="40"
             HorizontalOptions="Center"
-            VerticalOptions="Center" />
+            VerticalOptions="Center"
+            Grid.Row="3" />
 
-        <HorizontalStackLayout
+        <Button
+            Text="Salvar"
+            BackgroundColor="Green"
+            TextColor="White"
+            WidthRequest="100"
+            HeightRequest="40"
             HorizontalOptions="Center"
-            VerticalOptions="Center">
+            VerticalOptions="Center"
+            Clicked="SalvarFoiClicado"
+            Margin="0,0,0,10"
+            Grid.Row="4"/>
 
-            <Button
-                Text="Salvar"
-                BackgroundColor="Green"
-                TextColor="White"
-                WidthRequest="100"
-                HeightRequest="40"
-                HorizontalOptions="Center"
+        <Button
+            Text="Cancelar"
+            BackgroundColor="White"
+            TextColor="Black"
+            WidthRequest="100"
+            HeightRequest="40"
+            HorizontalOptions="Center"
+            VerticalOptions="Start"
+            Clicked="CancelarClicado"
+            Grid.Row="5"/>
+
+        <Frame  x:Name="frameSalvar"
+                IsVisible="False"
+                CornerRadius="30"
                 VerticalOptions="Center"
-                Clicked="OnSaveClicked"
-                Margin="0,0,10,0" />
-
-            <Button
-                Text="Cancelar"
                 BackgroundColor="White"
-                TextColor="Black"
-                WidthRequest="100"
-                HeightRequest="40"
+                BorderColor="Black"
                 HorizontalOptions="Center"
-                VerticalOptions="Center"
-                Clicked="OnCancelClicked" />
+                Grid.Row="1"
+                Grid.RowSpan="2">
+        <Grid>
+         <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+         </Grid.RowDefinitions>
 
-        </HorizontalStackLayout>
-    </VerticalStackLayout>
+         <Label Text="Dados salvos com sucesso!"
+                Margin="10"
+                Grid.Row="0"/>
+
+         <Button Text="OK!"
+                 CornerRadius="10"
+                 Clicked="BotaoOkClicado"
+                 Grid.Row="1"/>
+
+        </Grid>
+       </Frame>
+
+
+    </Grid>
+
+    
+
 </ContentPage>

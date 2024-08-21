@@ -21,9 +21,23 @@
             Margin="0,0,0,20" 
             Grid.Row="0"/>
 
+        <Label
+            Text="Nome:"
+            Grid.Row="1"
+            Margin="60,20,20,20"/>
+
+        <Label
+            Text="CPF:"
+            Grid.Row="2"
+            Margin="75,20,20,20"/>
+
+        <Label
+            Text="Telefone:"
+            Grid.Row="3"
+            Margin="40,20,20,20"/>
+
         <Entry
             x:Name="NomeEntry"
-            Placeholder="Nome"
             Margin="0,0,0,10"
             WidthRequest="200"
             HeightRequest="40"
@@ -34,7 +48,6 @@
  
         <Entry
             x:Name="CPFEntry"
-            Placeholder="CPF"
             Margin="0,0,0,10"
             WidthRequest="200"
             HeightRequest="40"
@@ -44,7 +57,6 @@
 
         <Entry
             x:Name="TelefoneEntry"
-            Placeholder="Telefone"
             Margin="0,0,0,20"
             WidthRequest="200"
             HeightRequest="40"

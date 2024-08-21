@@ -11,7 +11,7 @@ namespace AppEquipe1
             InitializeComponent();
         }
 
-        private void OnSaveClicked(object sender, EventArgs e)
+        private void SalvarFoiClicado(object sender, EventArgs e)
         {
             string nome = NomeEntry.Text;
             string telefone = TelefoneEntry.Text;
@@ -23,12 +23,17 @@ namespace AppEquipe1
             Application.Current.MainPage = new ListaFornecedorPage();
             }
 
-        private void OnCancelClicked(object sender, EventArgs e)
+        private void CancelarClicado(object sender, EventArgs e)
         {
             NomeEntry.Text = string.Empty;
             TelefoneEntry.Text = string.Empty;
             MateriaPrimaEntry.Text = string.Empty;
             DisplayAlert("Cancelar", "Cadastro cancelado!", "OK");
+        }
+
+        void BotaoOkClicado(object sender, EventArgs args)
+        {
+            Application.Current.MainPage = new ListaFornecedorPage();
         }
     }
 }
