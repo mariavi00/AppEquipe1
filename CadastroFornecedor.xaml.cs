@@ -1,5 +1,6 @@
 using System;
 using AppEquipe1.Controles;
+using AppEquipe1.Modelos;
 using Microsoft.Maui.Controls;
 
 namespace AppEquipe1
@@ -13,14 +14,14 @@ namespace AppEquipe1
 
         private void SalvarFoiClicado(object sender, EventArgs e)
         {
-            string nome = NomeEntry.Text;
-            string telefone = TelefoneEntry.Text;
-            string materiaPrima = MateriaPrimaEntry.Text;
+            var fornecedor = new Modelos.Fornecedor();
+            fornecedor.Nome = NomeEntry.Text;
+            fornecedor.Telefone = TelefoneEntry.Text;
+            fornecedor.Materiarima = MateriaPrimaEntry.Text;
             
-            DisplayAlert("Salvar", "Dados salvos com sucesso!", "OK");
-        
-            if (Application.Current != null)
-            Application.Current.MainPage = new ListaFornecedorPage();
+             FornecedorControle.CriarOuAtualizar(fornecedor);
+            
+            frameSalvar.IsVisible = true;
             }
 
         private void CancelarClicado(object sender, EventArgs e)
