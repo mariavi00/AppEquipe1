@@ -7,7 +7,6 @@
     <StackLayout Padding="20" 
                  Spacing="20">
         
-        <!-- Barra de Busca e Botão de Cadastro -->
         <Grid ColumnDefinitions="Auto,*, Auto, Auto">
         
             <Button Text="Voltar"
@@ -24,8 +23,7 @@
                     Grid.Column="3"/>
         </Grid>
 
-        <!-- Tabela de Fornecedores -->
-        <CollectionView ItemsSource="{Binding Fornecedores}">
+        <CollectionView x:Name="ListaFornecedor">
             <CollectionView.Header>
                 <Grid ColumnDefinitions="*,*,*">
 

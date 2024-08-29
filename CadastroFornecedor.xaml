@@ -113,6 +113,45 @@
         </Grid>
        </Frame>
 
+       <Frame  x:Name="frameCancelar"
+                IsVisible="False"
+                CornerRadius="20" 
+                Padding="20" 
+                BackgroundColor="White" 
+                HasShadow="True"
+                Grid.Row="1"
+                Grid.RowSpan="3">
+                    
+                <StackLayout HorizontalOptions="Center">
+
+                    <Label Text="Tem certeza que deseja cancelar?" 
+                           HorizontalOptions="Center" 
+                           FontSize="Large" 
+                           Margin="0,0,0,20" />
+
+                    <StackLayout Orientation="Horizontal" 
+                                 HorizontalOptions="Center" 
+                                 Margin="0,0,0,20">
+
+                        <Button Text="SIM" 
+                                Clicked="SimCancelarClicado"
+                                BackgroundColor="White" 
+                                TextColor="Black" 
+                                BorderColor="Black" 
+                                BorderWidth="1"
+                                Margin="0,10,10,0" />
+
+                        <Button Text="NÃO" 
+                                Clicked="NaoCancelarClicado"
+                                BackgroundColor="Red" 
+                                TextColor="White" 
+                                BorderColor="Black" 
+                                BorderWidth="1"
+                                Margin="0,10,10,0"/>
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+
 
     </Grid>
 

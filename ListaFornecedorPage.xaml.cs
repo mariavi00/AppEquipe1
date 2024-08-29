@@ -1,3 +1,4 @@
+using AppEquipe1.Controles;
 using AppEquipe1.Modelos;
 using Microsoft.Maui.Controls;
 using System.Collections.ObjectModel;
@@ -7,7 +8,7 @@ namespace AppEquipe1
 {
     public partial class ListaFornecedorPage : ContentPage
     {
-        public ObservableCollection<Fornecedor> Fornecedores { get; set; }
+        FornecedorControle fornecedorControle = new FornecedorControle();
         public ICommand EditCommand { get; }
         public ICommand DeleteCommand { get; }
 
@@ -16,6 +17,13 @@ namespace AppEquipe1
             InitializeComponent();
            
         }
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            ListaFornecedor.ItemsSource = fornecedorControle.LerTodos();
+        }
+
 
         private void VoltarClicado(object sender, EventArgs e)
         {
@@ -39,7 +47,7 @@ namespace AppEquipe1
 
         private void OnDelete(Fornecedor fornecedor)
         {
-            Fornecedores.Remove(fornecedor);
+            //Fornecedores.Remove(fornecedor);
         }
     }
 

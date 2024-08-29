@@ -24,7 +24,7 @@ public class FornecedorControle : BaseControle
   public virtual List<Fornecedor>? LerTodos()
   {
     var tabela = liteDB.GetCollection<Fornecedor>(NomeDaTabela);
-    return new List<Fornecedor>(tabela.FindAll().OrderBy(d => d.Nome));
+    return new List<Fornecedor>(tabela.FindAll().OrderBy(d => d.Id));
   }
 
   //----------------------------------------------------------------------------

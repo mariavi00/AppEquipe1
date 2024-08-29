@@ -9,17 +9,7 @@ namespace AppEquipe1
 
         public EstoqueMateriaPrima()
         {
-            InitializeComponent();
-            Items = new ObservableCollection<Pedidos>
-            {
-                new Pedidos { MateriaPrima = "Exemplo 1", 
-                             Fornecedor = "Fornecedor 1", 
-                             Quantidade = "10" },
-                new Pedidos { MateriaPrima = "Exemplo 2", 
-                             Fornecedor = "Fornecedor 2", 
-                             Quantidade = "20" }
-            };
-            BindingContext = this;
+           
         }
 
         private void OnEditButtonClicked(object sender, EventArgs e)

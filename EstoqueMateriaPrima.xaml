@@ -9,14 +9,18 @@
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20" />
             <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="20" />
         </Grid.ColumnDefinitions>
 
         <!-- Search and Register Buttons -->
         <StackLayout Orientation="Horizontal"
                      HorizontalOptions="Center">
 
-            <Button Text="Buscar" />
+            <Button Text="Voltar"
+                    BackgroundColor="Red"
+                    />
             <SearchBar />
             <Button Text="Cadastrar" />
         </StackLayout>
@@ -48,10 +52,6 @@
                         FontAttributes="Bold" 
                         Grid.Row="0" 
                         Grid.Column="2" />
-                <Label  Text="Ações" 
-                        FontAttributes="Bold" 
-                        Grid.Row="0" 
-                        Grid.Column="3" />
 
                 <!-- Data Rows -->
                 <CollectionView Grid.Row="1" 
@@ -75,13 +75,7 @@
                                 <Label  Text="{Binding Quantidade}" 
                                         Grid.Column="2" />
 
-                                <StackLayout Orientation="Horizontal" 
-                                             Grid.Column="3">
-                                    <Button Text="🖉" 
-                                            Clicked="OnEditButtonClicked" />
-                                    <Button Text="🗑" 
-                                            Clicked="OnDeleteButtonClicked" />
-                                </StackLayout>
+                            
                             </Grid>
                         </DataTemplate>
                     </CollectionView.ItemTemplate>
