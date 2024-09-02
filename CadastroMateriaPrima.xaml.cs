@@ -5,25 +5,28 @@ namespace AppEquipe1
 {
     public partial class CadastroMateriaPrima : ContentPage
     {
+        Controles.MateriaprimaControle materiaPrimaControle = new Controles.MateriaprimaControle();
         public CadastroMateriaPrima()
         {
             InitializeComponent();
         }
 
-        private void OnSalvarClicked(object sender, EventArgs e)
+        private async void SalvarClicado(object sender, EventArgs e)
         {
-            string nome = NomeEntry.Text;
-            string unidade = UnidadePicker.SelectedItem?.ToString();
+            var materiaPrima = new Modelos.Materiaprima();
+            materiaPrima.MateriaPrima = NomeEntry.Text;
+            materiaPrima.Quantidade = int.Parse(QuantidadeEntry.Text);
             
-            // Lógica para salvar os dados
-            DisplayAlert("Salvar", $"Nome: {nome}\nUnidade: {unidade}", "OK");
+            materiaPrimaControle.CriarOuAtualizar(materiaPrima);
+
+            await DisplayAlert("Salvo!", "Dados salvos com sucesso.", "Ok!");
+            Application.Current.MainPage = new EstoqueMateriaPrima(); 
         }
 
-        private void OnCancelarClicked(object sender, EventArgs e)
+        private async void OnCancelarClicked(object sender, EventArgs e)
         {
-            // Lógica para cancelar a ação
-            NomeEntry.Text = string.Empty;
-            UnidadePicker.SelectedItem = null;
+            if(await DisplayAlert("Cancelar", "Tem certeza que deseja cancelar?", "Sim", "Não"))
+                Application.Current.MainPage = new EstoqueMateriaPrima();
         }
     }
 }

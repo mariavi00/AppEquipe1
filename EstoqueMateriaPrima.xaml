@@ -2,85 +2,55 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppEquipe1.EstoqueMateriaPrima">
-
-    <Grid Padding="10">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="*" />
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="20" />
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="20" />
-        </Grid.ColumnDefinitions>
-
-        <!-- Search and Register Buttons -->
-        <StackLayout Orientation="Horizontal"
-                     HorizontalOptions="Center">
-
+ <VerticalStackLayout Padding="20" Spacing="20">
+        
+        <Grid ColumnDefinitions="Auto, *, Auto, Auto">
             <Button Text="Voltar"
-                    BackgroundColor="Red"
-                    />
-            <SearchBar />
-            <Button Text="Cadastrar" />
-        </StackLayout>
+                    Clicked="VoltarClicado"
+                    Grid.Column="0"/>
+            <Entry  x:Name="Busca" 
+                    Placeholder="Buscar"
+                    Grid.Column="1"/>
+            <Button Text="🔍" 
+                    Grid.Column="2"/>
+            <Button Text="Cadastre-se" 
+                    Clicked="CadastroClicado" 
+                    Grid.Column="3"/>
+        </Grid>
+                
+                <Grid ColumnDefinitions="*,*,*,0">
 
-        <!-- Data Grid -->
-        <ScrollView Grid.Row="1">
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="*" />
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="2*" />
-                    <ColumnDefinition Width="2*" />
-                    <ColumnDefinition Width="1*" />
-                    <ColumnDefinition Width="Auto" />
-                </Grid.ColumnDefinitions>
+                    <Label  Text="Matéria Prima" 
+                            FontAttributes="Bold" 
+                            Grid.Column="0"/>
+                    <Label  Text="Fornecedor" 
+                            FontAttributes="Bold" 
+                            Grid.Column="1"/>
+                    <Label  Text="Quantidade" 
+                            FontAttributes="Bold" 
+                            Grid.Column="2"/>
+    
+                </Grid>
+        <ListView x:Name="Lista" >
 
-                <!-- Headers -->
-                <Label  Text="Matéria-prima" 
-                        FontAttributes="Bold" 
-                        Grid.Row="0" 
-                        Grid.Column="0" />
-                <Label  Text="Fornecedor" 
-                        FontAttributes="Bold" 
-                        Grid.Row="0" 
-                        Grid.Column="1" />
-                <Label  Text="Quantidade" 
-                        FontAttributes="Bold" 
-                        Grid.Row="0" 
-                        Grid.Column="2" />
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                <ViewCell>
+                    <Grid ColumnDefinitions="25, *, *, *">
+                        <Label  Text="{Binding Id}" 
+                                Grid.Column="0"/>
+                        <Label  Text="{Binding Nome}" 
+                                Grid.Column="1"/>
+                        <Label  Text="{Binding Telefone}" 
+                                Grid.Column="2"/>
+                        <Label  Text="{Binding CPF}"
+                                Grid.Column="3"/>
+                    </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
 
-                <!-- Data Rows -->
-                <CollectionView Grid.Row="1" 
-                                Grid.ColumnSpan="4" 
-                                ItemsSource="{Binding Items}">
-                                
-                    <CollectionView.ItemTemplate>
-                        <DataTemplate>
-                            <Grid Padding="5">
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="2*" />
-                                    <ColumnDefinition Width="2*" />
-                                    <ColumnDefinition Width="1*" />
-                                    <ColumnDefinition Width="Auto" />
-                                </Grid.ColumnDefinitions>
-
-                                <Label  Text="{Binding MateriaPrima}" 
-                                        Grid.Column="0" />
-                                <Label  Text="{Binding Fornecedor}" 
-                                        Grid.Column="1" />
-                                <Label  Text="{Binding Quantidade}" 
-                                        Grid.Column="2" />
-
-                            
-                            </Grid>
-                        </DataTemplate>
-                    </CollectionView.ItemTemplate>
-                </CollectionView>
-            </Grid>
-        </ScrollView>
-    </Grid>
+    </VerticalStackLayout>
+    
 </ContentPage>

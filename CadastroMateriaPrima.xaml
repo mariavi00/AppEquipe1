@@ -16,18 +16,20 @@
                            HorizontalOptions="Center" 
                            FontSize="Large" 
                            Margin="0,0,0,20" />
-                    <Entry Placeholder="Nome:" 
+                    <Entry Placeholder="Matéria-prima:" 
                            x:Name="NomeEntry" 
+                           Margin="0,0,0,20" />
+                    <Entry Placeholder="Quantidade:" 
+                           x:Name="QuantidadeEntry" 
                            Margin="0,0,0,20" />
                     <Picker Title="Unidade:" 
                             x:Name="UnidadePicker" 
                             Margin="0,0,0,20">
-                        <!-- Add items to the Picker as needed -->
                     </Picker>
                     <Button Text="Salvar" 
                             BackgroundColor="Green" 
                             TextColor="White" 
-                            Clicked="OnSalvarClicked" 
+                            Clicked="SalvarClicado" 
                             Margin="0,0,0,20" />
                     <Button Text="Cancelar" 
                             Clicked="OnCancelarClicked" />

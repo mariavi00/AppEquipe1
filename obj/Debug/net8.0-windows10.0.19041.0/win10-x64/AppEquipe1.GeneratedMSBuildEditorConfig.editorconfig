@@ -48,12 +48,6 @@ build_metadata.AdditionalFiles.ManifestResourceName = AppEquipe1.CadastroPedido.
 build_metadata.AdditionalFiles.TargetPath = CadastroPedido.xaml
 build_metadata.AdditionalFiles.RelativePath = CadastroPedido.xaml
 
-[C:/Users/Aluno/AppEquipe1/Confirmacao.xaml]
-build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = AppEquipe1.Confirmacao.xaml
-build_metadata.AdditionalFiles.TargetPath = Confirmacao.xaml
-build_metadata.AdditionalFiles.RelativePath = Confirmacao.xaml
-
 [C:/Users/Aluno/AppEquipe1/EstoqueMateriaPrima.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = AppEquipe1.EstoqueMateriaPrima.xaml

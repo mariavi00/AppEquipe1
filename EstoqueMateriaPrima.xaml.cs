@@ -1,32 +1,29 @@
 using System.Collections.ObjectModel;
+using AppEquipe1.Controles;
 using Microsoft.Maui.Controls;
 
 namespace AppEquipe1
 {
     public partial class EstoqueMateriaPrima : ContentPage
     {
-        public ObservableCollection<Pedidos> Items { get; set; }
-
+        Controles.MateriaprimaControle materiaPrimaControle = new Controles.MateriaprimaControle();
         public EstoqueMateriaPrima()
         {
-           
+           InitializeComponent();
+
+            Lista.ItemsSource = materiaPrimaControle.LerTodos();
         }
 
-        private void OnEditButtonClicked(object sender, EventArgs e)
+        private void VoltarClicado(object sender, EventArgs e)
         {
-            // Lógica para editar o item
+            Application.Current.MainPage = new MainPage();
         }
 
-        private void OnDeleteButtonClicked(object sender, EventArgs e)
+        private void CadastroClicado(object sender, EventArgs e)
         {
-            // Lógica para deletar o item
+            Application.Current.MainPage = new CadastroMateriaPrima();        
         }
     }
 
-    public class Pedidos
-    {
-        public string MateriaPrima { get; set; }
-        public string Fornecedor { get; set; }
-        public string Quantidade { get; set; }
-    }
+    
 }
