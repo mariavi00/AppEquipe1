@@ -14,7 +14,6 @@ namespace AppEquipe1
         private async void SalvarClicado(object sender, EventArgs e)
         {
             var materiaPrima = new Modelos.Materiaprima();
-            materiaPrima.MateriaPrima = NomeEntry.Text;
             materiaPrima.Quantidade = int.Parse(QuantidadeEntry.Text);
             
             materiaPrimaControle.CriarOuAtualizar(materiaPrima);

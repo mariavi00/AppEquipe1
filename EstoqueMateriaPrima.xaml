@@ -20,13 +20,13 @@
                 
                 <Grid ColumnDefinitions="*,*,*,0">
 
-                    <Label  Text="Matéria Prima" 
+                    <Label  Text="Matéria-Prima" 
                             FontAttributes="Bold" 
                             Grid.Column="0"/>
-                    <Label  Text="Fornecedor" 
+                    <Label  Text="Quantidade" 
                             FontAttributes="Bold" 
                             Grid.Column="1"/>
-                    <Label  Text="Quantidade" 
+                    <Label  Text="Unidade" 
                             FontAttributes="Bold" 
                             Grid.Column="2"/>
     
@@ -35,16 +35,14 @@
 
             <ListView.ItemTemplate>
                 <DataTemplate>
-                <ViewCell>
+                <ViewCell> 
                     <Grid ColumnDefinitions="25, *, *, *">
-                        <Label  Text="{Binding Id}" 
+                        <Label  Text="{Binding Matéria Prima}" 
                                 Grid.Column="0"/>
-                        <Label  Text="{Binding Nome}" 
+                        <Label  Text="{Binding Fornecedor}" 
                                 Grid.Column="1"/>
-                        <Label  Text="{Binding Telefone}" 
+                        <Label  Text="{Binding Quantidade}" 
                                 Grid.Column="2"/>
-                        <Label  Text="{Binding CPF}"
-                                Grid.Column="3"/>
                     </Grid>
                     </ViewCell>
                 </DataTemplate>
